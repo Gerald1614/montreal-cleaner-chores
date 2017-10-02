@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+// Import your custom theme
+@import './src/theme.scss';
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.jumbotron {
+    @include zero-margin(5px,10px);
+    background-color: mat-color($primary, 800);
+    color:floralwhite;
+    min-height: 150px;
+}
+
+img{
+    width: 70%;
+}

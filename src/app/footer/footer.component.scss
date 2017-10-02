@@ -1,0 +1,16 @@
+
+@import '~@angular/material/theming';
+// Import your custom theme
+@import './src/theme.scss';
+
+// Use mat-color to extract individual colors from a palette as necessary.
+.footer {
+  background-color: mat-color($primary);
+  color:white;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: mat-color($warn)
+}
