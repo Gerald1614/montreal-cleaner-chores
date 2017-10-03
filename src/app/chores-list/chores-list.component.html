@@ -1,3 +1,29 @@
-<p>
-  chores-list works!
-</p>
+<div class="container">
+  <md-form-field>
+    <input mdInput [mdDatepicker]="picker" [value]='datedebut' placeholder="Date debut">
+    <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+    <md-datepicker (selectedChanged)="selectedChanged($event)" #picker></md-datepicker>
+  </md-form-field>
+  <div [hidden]="chores">
+    <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+
+  <md-card class="list-card" *ngFor="let chore of chores | datefork:filterarg">
+      <button md-raised-button class="btn" color="warn">Participate</button>
+    <md-card-header>
+
+      <md-card-title>{{chore.properties.nom_corvee}} : {{chore.properties.arrondissement}}</md-card-title>
+      <md-card-subtitle>{{chore.properties.date_debut_corvee | date}}  - {{chore.properties.date_fin_corvee | date}}</md-card-subtitle>
+
+    </md-card-header>
+    <md-card-content>
+      <p>{{chore.properties.informations_supplementaires}}</p>
+
+    </md-card-content>
+
+
+  
+  </md-card>
+
+
+</div>

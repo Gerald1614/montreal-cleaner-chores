@@ -5,12 +5,12 @@
 
 // Use mat-color to extract individual colors from a palette as necessary.
 .footer {
-  background-color: mat-color($primary);
+  background-color: mat-color($dark-primary);
   color:white;
 }
 a{
     color: white;
 }
 a:hover{
-    color: mat-color($warn)
+    color: mat-color($dark-warn)
 }

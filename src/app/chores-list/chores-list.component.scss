@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+// Import your custom theme
+@import './src/theme.scss';
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.container {
+    @include zero-margin(20px,30px);
+}
+.list-card{
+    margin: 5px;
+    padding: 5px;
+    md-card-header {
+        padding: 5px;
+        background-color: mat-color($dark-primary, 800);
+        color:floralwhite;
+    }
+    md-card-content {
+        padding:5px;
+    }
+}
+.btn{
+    position: absolute;
+    right:50px;
+    top:20px;
+    max-height: 40px;
+}
+md-form-field {
+    color:mat-color($dark-warn);
+}

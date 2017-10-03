@@ -9,7 +9,7 @@
 
 .jumbotron {
     @include zero-margin(5px,10px);
-    background-color: mat-color($primary, 800);
+    background-color: mat-color($dark-primary, 800);
     color:floralwhite;
     min-height: 150px;
 }
