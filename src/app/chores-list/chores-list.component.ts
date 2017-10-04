@@ -16,7 +16,7 @@ export class ChoresListComponent implements OnInit {
     console.log(event);
     this.filterarg=event;
   };
-  //datedebut ="2017-08-07T17:00:00.000Z";
+  
   chores: Chore[];
   filterarg:Date= this.datedebut;
 

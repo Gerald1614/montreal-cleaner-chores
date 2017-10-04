@@ -37,7 +37,7 @@ import {
 } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { baseURL } from './shared/baseurl';
-
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service'
 
 import { AppComponent } from './app.component';
@@ -49,6 +49,11 @@ import { ChoresListComponent } from './chores-list/chores-list.component';
 
 import { ChoreService } from './services/chore.service';
 import { DateforkPipe } from './datefork.pipe';
+import { DatesortPipe } from './datesort.pipe';
+import { ListeComponent } from './liste/liste.component';
+import { CarteComponent } from './carte/carte.component';
+import { AgmCoreModule } from '@agm/core';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 @NgModule({
   declarations: [
@@ -56,7 +61,10 @@ import { DateforkPipe } from './datefork.pipe';
     HeaderComponent,
     FooterComponent,
     ChoresListComponent,
-    DateforkPipe
+    DateforkPipe,
+    DatesortPipe,
+    ListeComponent,
+    CarteComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +101,12 @@ import { DateforkPipe } from './datefork.pipe';
     MdToolbarModule,
     MdTooltipModule,
     MdStepperModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCSAoC3GRt9gaupzO1w1oBo-IIMsj0-Aaw'
+    }),
+    AgmSnazzyInfoWindowModule
   ],
   providers: [ChoreService, ProcessHTTPMsgService, {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent]

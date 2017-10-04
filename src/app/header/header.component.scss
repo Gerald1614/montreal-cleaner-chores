@@ -17,3 +17,7 @@
 img{
     width: 70%;
 }
+
+.active {
+    background: mat-color($dark-primary, 600);
+}

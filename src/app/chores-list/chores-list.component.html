@@ -8,8 +8,8 @@
     <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
-  <md-card class="list-card" *ngFor="let chore of chores | datefork:filterarg">
-      <button md-raised-button class="btn" color="warn">Participate</button>
+  <md-card class="list-card" *ngFor="let chore of chores | datefork:filterarg |datesort">
+      <button md-raised-button class="btn" color="warn"><i class="material-icons">group_add</i> Participate</button>
     <md-card-header>
 
       <md-card-title>{{chore.properties.nom_corvee}} : {{chore.properties.arrondissement}}</md-card-title>
@@ -18,7 +18,11 @@
     </md-card-header>
     <md-card-content>
       <p>{{chore.properties.informations_supplementaires}}</p>
-
+      <p>
+          <span><i class="material-icons">people_outline</i> Nombre Max Participants  : {{chore.properties.nombre_max_participants}}</span>
+        
+        <span class="rightaligned"><i class="material-icons">group</i> Participants inscrits : {{chore.properties.nombre_participants_inscrits}}</span>
+      </p>
     </md-card-content>
 
 
