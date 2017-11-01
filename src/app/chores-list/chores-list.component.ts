@@ -27,6 +27,9 @@ export class ChoresListComponent implements OnInit {
     this.choreService.getChores()
     .subscribe(chores => this.chores = chores);
   }
-
-  
+ 
+onParticipate(chore){
+  console.log(chore);
+  (chore.properties.parametre_inscription) ? alert(chore.properties.parametre_inscription + ", veuillez contacter l'arrondissement :"+ chore.properties.arrondissement) : alert("veuillez contacter l'arrondissement: "+ chore.properties.arrondissement);
+  };
 };

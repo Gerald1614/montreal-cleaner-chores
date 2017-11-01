@@ -12,7 +12,7 @@ export class Chore{
     en_cas_de_pluie :string;
     date_report_corvee_en_cas_pluie :string;
     type_corvee :string;
-    paramètre_inscription :string;
+    parametre_inscription :string;
     nombre_max_participants :number;
     nombre_participants_inscrits :number;
 
